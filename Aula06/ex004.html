@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 32);
+            color: white;
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+   <script>
+        var nome = window.prompt("Qual é o seu Nome:");
+        document.write(`Olá <strong>${nome}</strong>! Seu nome tem ${nome.length} letras!`)
+        document.write(`</br>Seu nome em Maisculo fica:  ${nome.toUpperCase()}, gostou?`)
+        document.write(`</br>Seu nome em minusculo fica:  ${nome.toLowerCase()}, gostou?`)
+        var n1 = 15043.5;
+        //Aqui abaixo um exemplo de formatação de valor em javascript
+        document.writeln(` Seu salário é de ${n1.toLocaleString('pt-br',{style: 'currency',currency:'BRL'})}`)
+
+   </script> 
+</body>
+</html>

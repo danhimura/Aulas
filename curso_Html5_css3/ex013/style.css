@@ -1,0 +1,16 @@
+
+@charset "UTF-8";
+body{
+    background-color: rgb(1, 1, 44);
+    font: normal Arial;
+    color: white;
+}
+h2{
+    color: orangered;
+}
+h1#cabec{
+    color: rgb(255, 255, 255);
+}
+h1.titulo{
+    color:rebeccapurple;
+}

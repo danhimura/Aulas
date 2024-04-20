@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(2, 2, 43);
+            color: orangered;
+            font: 18pt Arial;
+        }
+        div#pais{
+            margin-top: 20px;
+            background-color: aqua;
+            width: 200px;
+            height: 120px;
+            margin-left: 20px;
+        }
+        input#txtpais{
+            margin-left: 10px;
+        }
+        input#btck{
+            margin-left: 65px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pais">
+        Informe sua nacionalidade:<input type="text" id="txtpais">
+        <input type="button" id="btck" value="Checar" onclick="verifica()">
+        <div id="res">
+
+        </div>
+    </div>
+<script>
+    function verifica(){
+        var txtpais = document.getElementById('txtpais')
+        var pais    = txtpais.value.toUpperCase();
+        var res     = document.querySelector('div#res')
+        
+        if (pais === 'BRASIL'){
+            res.innerHTML = `Nascendo no ${pais} você é brasileiro`
+        }else{
+            res.innerHTML = `Nascendo no ${pais} você é estrangeiro`
+        }
+        var hora = new Date()
+        res.innerHTML += ' : '+hora.getHours()+':'+hora.getMinutes()
+    }
+   
+    
+</script> 
+</body>
+</html>

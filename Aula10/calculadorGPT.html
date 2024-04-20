@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input#display{
+            margin-top: 20px;
+            background-color: rgb(161, 161, 199);
+            font: normal 20pt Arial;
+            width: 220px;     
+        }
+        div#linha1{
+            margin-top: 20px; 
+        }
+        div#linha4{
+            margin-top: 20px;        
+        }
+        input.numero{
+            width: 50px;
+            margin-left: 5px;
+        }
+        input.operacao{
+            width: 50px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input id="display"  type="number" placeholder="Resultado" ></input>
+    <br>
+    <div id="linha1">
+        <input type = "button" value="1" id = "n1"  class = "numero"   onclick="clicar(1)">
+        <input type = "button" value="2" id = "n2"  class = "numero"   onclick="clicar(2)">
+        <input type = "button" value="3" id = "n3"  class = "numero"   onclick="clicar(3)">
+        <input type = "button" value="+" id="somar" class = "operacao" onclick="operacao('+')">
+    </div>
+    <br>
+    <div id="linha2">
+        <input type = "button" value="4" id = "n4"      class = "numero" onclick = "clicar(4)">
+        <input type = "button" value="5" id = "n5"      class = "numero" onclick = "clicar(5)">
+        <input type = "button" value="6" id = "n6"      class = "numero" onclick = "clicar(6)">
+        <input type = "button" value="-" id ="subtrair" class = "operacao" onclick="operacao('-')">
+    </div>
+    <br>
+    <div id="linha3">
+        <input type = "button" value="7" id = "n7"          class = "numero" onclick = "clicar(7)">
+        <input type = "button" value="8" id = "n8"          class = "numero" onclick = "clicar(8)">
+        <input type = "button" value="9" id = "n9"          class = "numero" onclick = "clicar(9)">
+        <input type = "button" value="X" id = "multiplicar" class = "operacao" onclick="operacao('*')">
+    </div>
+    <div id="linha4">
+        <input type = "button" value="0" id = "n0"        class = "numero"   onclick = "clicar(0)">
+        <input type = "button" value="." id = "nponto"    class = "operacao" onclick = "clicar('.')">
+        <input type = "button" value="=" id = "igualdade" class = "operacao" onclick = "calcular()">
+        <input type = "button" value="/" id = "dividr"    class = "operacao" onclick = "operacao('/')">
+    </div>
+
+    <script>
+        var n1 = null;
+        var operador = null;
+
+        function clicar(numero){
+            var resultado = document.getElementById('display');
+            resultado.value += numero;
+        }
+
+        function operacao(op){
+            if (n1 === null) {
+                n1 = Number(document.getElementById('display').value);
+                operador = op;
+                document.getElementById('display').value = '';
+            } else {
+                // Se n1 já foi definido, calcula imediatamente e armazena o operador para o próximo cálculo.
+                calcular();
+                operador = op;
+            }
+        }
+
+        function calcular() {
+            var n2 = Number(document.getElementById('display').value);
+            var resultado;
+            switch (operador) {
+                case '+':
+                    resultado = n1 + n2;
+                    break;
+                case '-':
+                    resultado = n1 - n2;
+                    break;
+                case '*':
+                    resultado = n1 * n2;
+                    break;
+                case '/':
+                    if (n2 !== 0) {
+                        resultado = n1 / n2;
+                    } else {
+                        alert('Erro: Divisão por zero.');
+                        return;
+                    }
+                    break;
+            }
+            document.getElementById('display').value = resultado;
+            // Limpa n1 para permitir a entrada de um novo número.
+            n1 = null;
+        }
+    </script>
+</body>
+</html>

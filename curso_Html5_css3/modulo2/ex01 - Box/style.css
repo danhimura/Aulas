@@ -1,0 +1,42 @@
+h1{
+    background-color: lightgray;
+    height: 300px;
+    width: 300px;
+    /* border-width: 10px;
+    border: solid;
+    border-color: darkgray; */
+    
+    border: 10px solid darkgray;
+
+    /* padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px; */
+
+    /* padding: 10px 10px 10px 10px; */
+    /* short hand ordem, qdo forem iguais, basta uma vez no padding */
+    
+    padding: 10px;
+
+    /* margin: auto; */
+
+    /* margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px; */
+
+    /* margin: 10px 10px 10px 10px; */
+    margin:10px auto 10px auto;
+
+    /* outline-width: 5px;
+    outline-style: dashed;
+    outline-color: salmon; */
+    outline: 5px dashed salmon;
+}
+
+a{
+    display: block;
+    border-width: 10px;
+    border: solid;
+    border-color: red;
+}

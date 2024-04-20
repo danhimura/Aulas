@@ -1,0 +1,176 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: 'android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+
+:root{
+--cor1: #034159;
+--cor2: #025951;
+--cor3: #02735E;
+--cor4: #77dda3;
+--cor5: #0CF25D;
+--corFonteBase: white;
+--fontePadrao:'android',cursive;
+--fontebebas: "Poppins", sans-serif;/*"Bebas Neue", sans-serif;*/
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--cor4);
+}
+nav{
+    display: block;
+    background-color: var(--cor1);
+    margin: auto;
+}
+nav > a{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    font-family: "Poppins", sans-serif;
+    margin-left: 10px;
+    text-shadow: 0px 7px 9px black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+nav > a:hover{
+    border-radius: 5px;
+    background-color: var(--cor4);
+    transition-duration: 300ms;
+}
+header{
+    background-image: linear-gradient(to top, var(--cor1),var(--cor2));
+    color: var(--corFonteBase);
+    font-family: var(--fontebebas);
+    text-align: center;
+    min-height: 120px;
+    padding-top: 40px;   
+
+    margin: auto;
+}
+header > h1{
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.514);
+    border: none;
+    font-weight: normal;
+   
+}
+header > p{
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9em;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.356);
+
+}
+main{
+    background-color: white;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.377);
+
+}
+main h1{
+    font-family: var(--fontePadrao);
+}
+main h2{
+    font-family: var(--fontePadrao);
+    color: var(--cor1);
+     background-image: linear-gradient(90deg,var(--cor5),transparent);
+     text-indent: 8px;
+}
+main img.bugdroid{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-family: "Poppins", sans-serif;
+}
+
+main strong{
+    color: var(--cor3);
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor1);
+    background-color: var(--cor4);
+}
+main a:hover{
+    text-decoration: underline;
+    color: rgb(156, 2, 2);
+}
+
+img{
+    width: 100%;
+    max-width: 800px;
+    min-width: 320px;
+}
+
+.video{
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor4);
+    box-shadow: 3px 3px 12px 1px rgba(0, 0, 0, 0.377);
+}
+aside h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 1em; 
+    color: white;
+    font-weight: bolder;
+    padding: 8px;
+    background-color: var(--cor1);
+    margin: 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+aside > p{
+    font-family: "Poppins", sans-serif;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+aside > ul{
+    list-style-position: inside;
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif;
+    columns: 2;
+    
+}
+footer{
+    background-color: var(--cor1);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+
+}

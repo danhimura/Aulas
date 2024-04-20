@@ -1,0 +1,9 @@
+
+body{
+    background-color: rgb(1, 1, 31);
+    font: normal Arial;
+    color: rgb(255, 255, 255);
+}
+mark{
+    background-color: limegreen;
+}
